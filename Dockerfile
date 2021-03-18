@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER Severalnines <ashraf@severalnines.com>
+MAINTAINER Min Zhou <coderplay@gmail.com>
 
 RUN apt-get update && \
         apt-get -y install curl

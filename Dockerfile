@@ -11,4 +11,6 @@ RUN apt-get -y install sysbench git make gcc unzip wget lua5.1 lua5.1-dev && \
 
 RUN wget https://luarocks.org/releases/luarocks-2.4.3.tar.gz && tar zxpf luarocks-2.4.3.tar.gz && cd luarocks-2.4.3 && ./configure && make bootstrap
 
-COPY *.lua $HOME/
+RUN apt-get install -y default-mysql-client
+
+COPY *.lua .

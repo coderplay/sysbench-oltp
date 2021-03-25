@@ -27,5 +27,4 @@ end
 
 function event()
    execute_order_ranges()
-   check_reconnect()
 end

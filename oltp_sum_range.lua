@@ -27,5 +27,4 @@ end
 
 function event()
    execute_sum_ranges()
-   check_reconnect()
 end

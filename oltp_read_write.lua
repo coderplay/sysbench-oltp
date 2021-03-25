@@ -62,6 +62,4 @@ function event()
    if not sysbench.opt.skip_trx then
       commit()
    end
-
-   check_reconnect()
 end

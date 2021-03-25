@@ -27,5 +27,4 @@ end
 
 function event()
    execute_distinct_ranges()
-   check_reconnect()
 end

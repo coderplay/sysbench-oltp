@@ -27,5 +27,4 @@ end
 
 function event()
    execute_index_updates(con)
-   check_reconnect()
 end

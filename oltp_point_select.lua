@@ -31,6 +31,4 @@ end
 
 function event()
    execute_point_selects()
-
-   check_reconnect()
 end

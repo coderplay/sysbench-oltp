@@ -31,6 +31,4 @@ function event()
 
    param[tnum].deletes[1]:set(id)
    stmt[tnum].deletes:execute()
-
-   check_reconnect()
 end

@@ -1,6 +1,6 @@
-# sysbench-tpcc
+# sysbench-oltp
 
-TPCC-like workload for sysbench 1.0.x.
+OLTP workload for sysbench 1.0.x.
 
 # MySQL 
 
@@ -77,4 +77,15 @@ mysql -h $tidb_address -P 4000 -u root -e "create database sbt"
 ```
 ./tpcc.lua --mysql-host=$tidb_address --mysql-port=4000 --mysql-user=root --mysql-db=sbt --time=300 --threads=64 \
 --report-interval=1 --tables=10 --scale=100 --db-driver=mysql cleanup
+```
+
+
+# OLTP Benchmark
+
+```
+/usr/share/sysbench/oltp_point_select.lua \
+--mysql-host=$tidb_address --mysql-port=4000 --mysql-user=root --mysql-db=test \
+--table-size=1000000 --tables=32 \
+--percentile=50 --histogram \
+--time=600 --threads=64 --report-interval=1 prepare
 ```

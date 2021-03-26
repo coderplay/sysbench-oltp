@@ -16,15 +16,28 @@
 -- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 -- ----------------------------------------------------------------------
--- Order range OLTP benchmark
+-- Delete-Insert OLTP benchmark
 -- ----------------------------------------------------------------------
 
 require("oltp_common")
 
 function prepare_statements()
-   prepare_order_ranges()
+   if not sysbench.opt.skip_trx then
+      prepare_begin()
+      prepare_commit()
+   end
+
+   prepare_delete_inserts()
 end
 
 function event()
-   execute_order_ranges()
+   if not sysbench.opt.skip_trx then
+      begin()
+   end
+
+   execute_delete_inserts()
+
+   if not sysbench.opt.skip_trx then
+      commit()
+   end
 end

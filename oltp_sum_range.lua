@@ -16,7 +16,7 @@
 -- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 -- ----------------------------------------------------------------------
--- Read-Only OLTP benchmark
+-- Sum Range OLTP benchmark
 -- ----------------------------------------------------------------------
 
 require("oltp_common")
